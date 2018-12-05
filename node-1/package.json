@@ -1,0 +1,17 @@
+{
+  "name": "node-1",
+  "version": "1.0.0",
+  "description": "homework for lesson 'node-1'",
+  "main": "server.js",
+  "scripts": {
+    "test1": "node request.js 10",
+    "test2": "node request.js 100",
+    "test3": "node request.js 10 async",
+    "test4": "node request.js 100 async",
+    "test5": "node request.js 1000 async",
+    "test6": "node request.js 10000 async",
+    "test": "npm run test1 && npm run test2 && npm run test3 && npm run test4 && npm run test5 && npm run test6",
+    "start": "node server.js"
+  },
+  "author": "v1690117"
+}
