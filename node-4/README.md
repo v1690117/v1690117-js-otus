@@ -10,7 +10,7 @@
 Используйте highWaterMark для ограничения внутреннего буффера.  
 
 ## Реализация
-Скрипт index.js создает и перенаправляет потоки readable -> transform -> writable.  
+Скрипт streams.js создает и перенаправляет потоки readable -> transform -> writable.  
 Поток readable генерирует случайные числа и возвращает их в виде объекта Number.   
 Поток transform добавляет к входным данным случайные числа и возвращает их в формате String.  
 Поток writable выводит входные параметры в консоль c заданным периодом времени.
@@ -25,11 +25,11 @@
 
 ## Примеры запуска  
 ```bash
-node index.js
+node streams.js
 
-node index.js timeout=100 
+node streams.js timeout=100 
 
-node index.js timeout=100 readablewm=3 transformwm=5 writablewm=20
+node streams.js timeout=100 readablewm=3 transformwm=5 writablewm=20
 
-node index.js timeout=1000 readablewm=100 transformwm=14 writablewm=100
+node streams.js timeout=1000 readablewm=100 transformwm=14 writablewm=100
 ```
