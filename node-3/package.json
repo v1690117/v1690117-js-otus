@@ -1,0 +1,11 @@
+{
+  "name": "node-3",
+  "version": "1.0.0",
+  "description": "homework for lesson 'node-3'",
+  "main": "tree.js",
+  "scripts": {
+    "test": "node tree test/foo",
+    "tree": "node tree"
+  },
+  "author": "v1690117"
+}
