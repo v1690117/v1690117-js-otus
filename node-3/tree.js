@@ -1,13 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 
-function run() {
+const run = function () {
     const args = process.argv.slice(2)
     const filepath = args[0] ? args[0] : __dirname
     tree(filepath).then(console.log)
 }
 
-async function tree(filepath) {
+const tree = async function (filepath) {
     let files = []
     let dirs = []
     if (await isDirectory(filepath)) {
@@ -32,22 +32,16 @@ async function tree(filepath) {
     }
 }
 
-function readDirectory(filepath) {
+const readDirectory = function (filepath) {
     return new Promise((resolve, reject) => fs.readdir(filepath, (err, files) => {
-        if (err)
-            reject(err)
-        else
-            resolve(files)
+        err ? reject(err) : resolve(files)
     }))
 }
 
-function isDirectory(filepath) {
+const isDirectory = function (filepath) {
     return new Promise((resolve, reject) => {
         fs.lstat(filepath, (e, stat) => {
-            if (e)
-                reject(e)
-            else
-                resolve(stat.isDirectory())
+            e ? reject(e) : resolve(stat.isDirectory())
         })
     })
 }
