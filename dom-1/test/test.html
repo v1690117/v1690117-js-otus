@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <script src="../index.js"></script>
+    <script>
+        setTimeout(() => {
+            let passed = true
+            let all = document.getElementsByTagName("*")
+            for (let i = 0; i < all.length; i++) {
+                if (!passed) break
+                if (all[i] instanceof HTMLElement) {
+                    let path = getPath(all[i])
+                    passed = (all[i] === document.querySelectorAll(path)[0])
+                }
+            }
+            alert(`Test ${passed ? 'passed' : 'failed'}`)
+        }, 1000)
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                            <div>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
